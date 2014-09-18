@@ -1,0 +1,27 @@
+{
+  "codecademy_javascript" : {
+    "title":"Codecademy JavaScript",
+    "description":"Master the basics of JavaScript",
+    "definition": {
+      "module":"codecademy.js",
+      "course":"javascript"
+    }
+  },
+  "khanacademy_intro" : {
+    "title":"Khan Academy: Intro to JavaScript",
+    "description":"Become a true programmer",
+    "definition": {
+      "module":"khanacademy.js",
+      "course":"intro"
+    }
+  },
+  "khanacademy_advanced" : {
+    "title" : "Khan Academy: Advanced JS",
+    "description":"You now have what it takes to become a coding master",
+    "definition": {
+      "module":"khanacademy.js",
+      "course":"advanced"
+    },
+    "deps":["khanacademy_intro","codecademy_javascript"]
+  }
+}
