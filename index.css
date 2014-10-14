@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: inline-flex;
+}
+
+.track-button {
+  font-size: 4em;
+  color: #58595B;
+  border-width: .1em;
+  border-color: #F26522;
+  border-style: solid;
+  border-radius: .3em;
+  padding: .1em;
+  margin: .1em;
+}
+
+.track-button:hover {
+  background: #DDDDDD;
+}
+
+#track-navigation {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 1em;
+  display: inline-block;
+}
+
+#course-tree {
+  background: white;
+  overflow: auto;
+}
+
+#course-tree svg text {
+  font-family: FontAwesome;
+  stroke: #58595B;
+  fill: #58595B;
+}
+
+#course-tree svg rect {
+  stroke: #F26522;
+  fill: #FFFFFF;
+}
+
+#course-tree svg g {
+  fill: #FFFFFF;
+}
+
+#course-tree svg line {
+  stroke: #AAAAAA;
+}
+
+#course-description {
+}
+
+.description-box {
+  border-width: .1em;
+  border-color: #F26522;
+  border-style: solid;
+  border-radius: .3em;
+  font-size: 4em;
+}
+
+.description-padding {
+  padding: .1em;
+}
+
+.description-heading {
+  font-size: .4em;
+  padding: .5em;
+  text-align: center;
+}
+
+.description-content {
+  font-size: .3em;
+  padding: .5em;
+}

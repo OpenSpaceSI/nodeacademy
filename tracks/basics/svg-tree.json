@@ -1,11 +1,11 @@
 {
   "khanacademy_intro" : {
-    "x":1,"y":0,"rune":"\uf091"
+    "x":0,"y":0,"rune":"\uf091"
   },
   "codecademy_javascript" : {
-    "x":3,"y":0,"rune":"\uf120"
+    "x":2,"y":0,"rune":"\uf120"
   },
   "khanacademy_advanced" : {
-    "x":2,"y":2,"rune":"\uf1e2"
+    "x":1,"y":2,"rune":"\uf1e2"
   }
 }

@@ -2,112 +2,8 @@
   <head>
     <link href="files/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="files/pure-min.css" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        display: inline-flex;
-      }
-      .track-button {
-        font-size: 4em;
-        color: #58595B;
-        border-width: .1em;
-        border-color: #F26522;
-        border-style: solid;
-        border-radius: .3em;
-        padding: .1em;
-        margin: .1em;
-      }
-      .track-button:hover {
-        background: #DDDDDD;
-      }
-      #track-navigation {
-        overflow-x: hidden;
-        overflow-y: auto;
-        height: 412px; /* match window height. Javascript-ify */
-        padding-right: 1em;
-        display: inline-block;
-      }
-      #course-tree {
-        background: white;
-        overflow: auto;
-      }
-      #course-tree svg text {
-        font-family: FontAwesome;
-        stroke: #58595B;
-        fill: #58595B;
-      }
-
-      #course-tree svg rect {
-        stroke: #F26522;
-        fill: #FFFFFF;
-      }
-
-      #course-tree svg g {
-        fill: #FFFFFF;
-      }
-
-      #course-tree svg line {
-        stroke: #AAAAAA;
-      }
-    </style>
-    <script>
-      window.onresize = function onresize(e) {
-        var height = window.innerHeight
-        document.getElementById("track-navigation").setAttribute("style","height:"+height)
-        document.getElementById("course-tree").setAttribute("style","width:"+(window.innerWidth-document.getElementById("track-navigation").offsetWidth-150)+"; height:"+height)
-        document.getElementById("course-description").setAttribute("style","width:"+150+"px; height:"+height)
-      }
-      window.onload = function onload(e) {
-        onresize(null)
-        var SvgTree = require('./svg-tree/index.js')
-        var treeOpts = {
-          "cellWidth":89,
-          "cellHeight":70,
-          "cellBorder":6
-        }
-        require('./loadClasses.js')(function(e,tracks) {
-          if(e) return console.log(e)
-          var tree = new SvgTree(treeOpts)
-          console.log(tracks)
-          var courses = []
-          var trackButtons = ""
-          // Pass 1 builds nodes
-          Object.keys(tracks).forEach(function(key) {
-            v = tracks[key]
-            trackButtons += '<i class="fa fa-fw track-button" title="'+key+'">'+v.rune+'</i><br>'
-            Object.keys(v.track).forEach(function(t) {
-              var c = v.track[t]
-              var svgTree = v.svgTree[t]
-              courses[t] = tree.CreateCell({"x":svgTree.x,"y":svgTree.y,"rune":svgTree.rune})
-              .on('click',function() {
-                console.log("Launching "+t)
-                console.log(c.definition)
-              })
-              .on('hover',function() {
-                console.log("Title: "+c.title)
-                console.log("Description: "+c.description)
-              })
-              .index
-            })
-          })
-          // Pass 2 builds edges
-          Object.keys(tracks).forEach(function(v) {
-            v = tracks[v]
-            Object.keys(v.track).forEach(function(t) {
-              var c = v.track[t]
-              if(!c.deps) return;
-              c.deps.forEach(function(dep) {
-                tree.addEdge(courses[t],courses[dep])
-              })
-            })
-          })
-          document.getElementById("track-navigation").innerHTML = trackButtons
-          tree.compile(document.getElementById("course-tree"))
-        })
-      }
-    </script>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
   </head>
   <body>
     <div id="track-navigation">
@@ -115,6 +11,12 @@
     <div id="course-tree">
     </div>
     <div id="course-description">
+      <div class="description-padding">
+        <div class="description-box">
+          <div class="description-heading"></div>
+          <div class="description-content"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

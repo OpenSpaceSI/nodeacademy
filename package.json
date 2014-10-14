@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "window": {
-    "toolbar": true
+    "toolbar": true,
+    "width":800,
+    "height":600
   },
   "author": "William Blankenship <william.jblankenship@gmail.com>",
   "license": "ISC",
