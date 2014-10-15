@@ -1,12 +1,12 @@
 {
   "name": "nodeacademy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.html",
   "scripts": {
     "start": "node wrapper.js"
   },
-  "bin" : {
-    "nodeacademy":"wrapper.js"
+  "bin": {
+    "nodeacademy": "wrapper.js"
   },
   "window": {
     "toolbar": false,
