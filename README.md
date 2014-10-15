@@ -7,6 +7,7 @@ A self paced, self directed, platform for learning how to code!
 
 *Disclaimer* : still a work in progress
 
+![Imgur](http://i.imgur.com/xQQRt6f.png)
 
 The course software models online courses from MOOCs (such as Khanacademy, Codecademy, and edx) as a tree structure.
 The easier courses sit at the top of the tree, and the harder towards the bottom. Completing higher nodes unlocks the
@@ -25,7 +26,7 @@ nodeacademy
 
 If you intend to contribute to nodeacademy:
 
-``
+```
 git clone git@github.com:openspacesi/nodeacademy.git
 cd nodeacademy
 npm link
