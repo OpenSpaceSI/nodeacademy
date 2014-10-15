@@ -30,6 +30,7 @@ body {
 #course-tree {
   background: white;
   overflow: auto;
+  text-align: center;
 }
 
 #course-tree svg text {
