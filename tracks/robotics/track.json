@@ -1,0 +1,17 @@
+{
+  "robotics1" : {
+    "title":"Robotics 1",
+    "description":"Master the basics of JavaScript",
+    "definition": {
+      "url" : "http://www.codecademy.com/tracks/javascript"
+    }
+  },
+  "robotics2" : {
+    "title":"Robotics 2",
+    "description":"Become a true programmer",
+    "definition": {
+      "url" : "https://www.khanacademy.org/computing/cs/programming"
+    },
+    "deps":["robotics1"]
+  }
+}
