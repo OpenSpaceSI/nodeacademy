@@ -14,7 +14,7 @@
     "height": 600
   },
   "author": "William Blankenship <william.jblankenship@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "nodewebkit": "^0.10.4",
     "once": "^1.3.0",
