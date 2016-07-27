@@ -20,7 +20,7 @@ tree where all the courses lead a student towards a functional knowledge of the 
 If you intend to use nodeacademy to learn, you can simply install it from npm.
 
 ```
-npm install -g nodecademy
+npm install -g nodeacademy
 nodeacademy
 ```
 
